@@ -1,15 +1,19 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Hello Vue 3.0 + Vite" />
+  <div>
+    <h1>Hello Vue.js</h1>
+    <input type="text" v-focus>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
 export default {
   name: 'App',
-  components: {
-    HelloWorld
+  directives: {
+    focus: {
+      mounted(el) {
+        el.focus()
+      }
+    }
   }
 }
 </script>
